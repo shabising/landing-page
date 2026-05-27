@@ -7,12 +7,11 @@ export default function Hero() {
       <Container>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-          {/* LEFT */}
-            <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1
               className="
                 font-display
@@ -53,23 +52,21 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* RIGHT */}
-            <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className="
-                    bg-white/70
-                    dark:bg-white/5
-                    backdrop-blur-xl
-                    rounded-[32px]
-                    p-8
-                    border
-                    border-gray-300
-                    dark:border-gray-800
-                "
-            >
-            {/* TOP NAV */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="
+              bg-white/70
+              dark:bg-white/5
+              backdrop-blur-xl
+              rounded-[32px]
+              p-8
+              border
+              border-gray-300
+              dark:border-gray-800
+            "
+          >
             <div className="flex items-center justify-between mb-8">
               <div className="text-black dark:text-white font-bold">
                 ✦ logo
@@ -82,7 +79,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* HERO CONTENT */}
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h2
@@ -127,7 +123,7 @@ export default function Hero() {
                     hover:scale-105
                     hover:-translate-y-1
                     hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]
-                    "
+                  "
                 >
                   Get Started
                 </button>
@@ -135,18 +131,19 @@ export default function Hero() {
 
               <div
                 className="
-                    bg-neutral-200bg-gradient-to-br
-                    from-pink-300
-                    to-orange-200
-                    dark:from-pink-500/30
-                    dark:to-orange-400/30
-                    rounded-2xl
-                    h-[320px]
+                  bg-neutral-200
+                  bg-gradient-to-br
+                  from-pink-300
+                  to-orange-200
+                  dark:from-pink-500/30
+                  dark:to-orange-400/30
+                  rounded-2xl
+                  h-[320px]
                 "
               />
             </div>
 
-            {/* STATS */}
+            {/* STATS — label əlavə edildi */}
             <div
               className="
                 grid
@@ -157,12 +154,12 @@ export default function Hero() {
               "
             >
               {[
-                "90%",
-                ">25.000",
-                ">2K",
+                { value: "90%", label: "Client Satisfaction" },
+                { value: ">25K", label: "Users Reached" },
+                { value: ">2K", label: "Projects Done" },
               ].map((item) => (
                 <div
-                  key={item}
+                  key={item.value}
                   className="
                     rounded-2xl
                     bg-white
@@ -180,10 +177,11 @@ export default function Hero() {
                       font-bold
                     "
                   >
-                    <>
-                        {item}
-                    </>
+                    {item.value}
                   </h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wider">
+                    {item.label}
+                  </p>
                 </div>
               ))}
             </div>

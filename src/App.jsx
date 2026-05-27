@@ -19,7 +19,6 @@ export default function App() {
       "
     >
 
-      {/* GLOW EFFECTS */}
       <div
         className="
           fixed

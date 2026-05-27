@@ -6,7 +6,7 @@ export default function Footer() {
       <Container>
 
         <div
-        className="
+          className="
             rounded-[32px]
             bg-white/70
             dark:bg-white/5
@@ -19,10 +19,9 @@ export default function Footer() {
             p-6
             sm:p-8
             md:p-12
-        "
+          "
         >
 
-          {/* TOP */}
           <div
             className="
               flex
@@ -45,7 +44,7 @@ export default function Footer() {
                   leading-none
                 "
               >
-                Let’s
+                Let's
                 <br />
                 Work
                 <br />
@@ -89,23 +88,19 @@ export default function Footer() {
 
           </div>
 
-          {/* BOTTOM */}
           <div
             className="
-                bg-white/70
-                dark:bg-white/5
-                backdrop-blur-xl
-                border
-                border-gray-300
-                dark:border-white/10
-                mt-12
-                pt-6
-                flex
-                flex-col
-                md:flex-row
-                items-center
-                justify-between
-                gap-4
+              mt-12
+              pt-6
+              border-t
+              border-gray-200
+              dark:border-white/10
+              flex
+              flex-col
+              md:flex-row
+              items-center
+              justify-between
+              gap-4
             "
           >
 
@@ -114,36 +109,36 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-6 text-sm">
-                <a
-                    href="#"
-                    className="
-                        transition
-                        duration-300
-                        hover:text-pink-500
-                    "
-                    >
-                    Twitter
-                </a>
-                <a
-                    href="#"
-                    className="
-                        transition
-                        duration-300
-                        hover:text-pink-500
-                    "
-                >
-                    Linkedin
-                </a>
-                <a
-                    href="#"
-                    className="
-                        transition
-                        duration-300
-                        hover:text-pink-500
-                    "
-                >
-                    Behance
-                </a>
+              <a
+                href="#"
+                className="
+                  transition
+                  duration-300
+                  hover:text-pink-500
+                "
+              >
+                Twitter
+              </a>
+              <a
+                href="#"
+                className="
+                  transition
+                  duration-300
+                  hover:text-pink-500
+                "
+              >
+                Linkedin
+              </a>
+              <a
+                href="#"
+                className="
+                  transition
+                  duration-300
+                  hover:text-pink-500
+                "
+              >
+                Behance
+              </a>
             </div>
 
           </div>

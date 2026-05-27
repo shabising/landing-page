@@ -9,47 +9,41 @@ export default function Navbar() {
 
   return (
     <header
-        className="
-            py-6
-            sticky
-            top-0
-            z-50
-            backdrop-blur-xl
-            bg-white/70
-            dark:bg-[#111111]/70
-            border-b
-            border-gray-200
-            dark:border-white/10
-        "
+      className="
+        py-6
+        sticky
+        top-0
+        z-50
+        backdrop-blur-xl
+        bg-white/70
+        dark:bg-[#111111]/70
+        border-b
+        border-gray-200
+        dark:border-white/10
+      "
     >
       <Container>
 
         <div className="flex items-center justify-between">
 
-          {/* LOGO */}
-          <h1 className="font-display
-            uppercase
-            tracking-wider
-            text-2xl"
-            >
+          <h1 className="font-display uppercase tracking-wider text-2xl">
             Portfolio
           </h1>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8">
             <a
-              href="#projects"
-                className="
+              href="#"
+              className="
                 transition
                 duration-300
                 hover:text-pink-500
                 hover:-translate-y-0.5"
-                >
+            >
               Home
             </a>
 
             <a
-              href="#"
+              href="#projects"
               className="
                 transition
                 duration-300
@@ -84,7 +78,6 @@ export default function Navbar() {
             <ThemeToggle />
           </nav>
 
-          {/* MOBILE BUTTON */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden"
@@ -94,7 +87,6 @@ export default function Navbar() {
 
         </div>
 
-        {/* MOBILE MENU */}
         {open && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -102,9 +94,6 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="
               md:hidden
-              transition
-              duration-300
-              hover:scale-110
               mt-6
               rounded-2xl
               border
@@ -119,9 +108,10 @@ export default function Navbar() {
               gap-6
             "
           >
-            <a href="#">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">About</a>
+            <a href="#" className="transition duration-300 hover:text-pink-500">Home</a>
+            <a href="#projects" className="transition duration-300 hover:text-pink-500">Projects</a>
+            <a href="#" className="transition duration-300 hover:text-pink-500">About</a>
+            <a href="#contact" className="transition duration-300 hover:text-pink-500">Contact</a>
 
             <ThemeToggle />
           </motion.div>

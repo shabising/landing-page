@@ -22,7 +22,6 @@ export default function Projects() {
     <section id="projects" className="py-24">
       <Container>
 
-        {/* TITLE */}
         <div className="mb-14">
           <h2
             className="
@@ -40,16 +39,15 @@ export default function Projects() {
           </h2>
         </div>
 
-        {/* GRID */}
         <div className="grid md:grid-cols-2 gap-8">
 
           {projects.map((project, index) => (
             <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className={`
                 rounded-[32px]
                 bg-white/70
@@ -61,12 +59,6 @@ export default function Projects() {
                 overflow-hidden
                 shadow-lg
                 shadow-pink-500/5
-                h-[220px]
-                md:h-[70%]
-                bg-gradient-to-br
-                from-pink-500
-                via-purple-500
-                to-orange-400
                 transition
                 duration-500
                 hover:scale-105
@@ -80,7 +72,6 @@ export default function Projects() {
               `}
             >
 
-              {/* IMAGE */}
               <div
                 className="
                   h-[220px]
@@ -92,7 +83,6 @@ export default function Projects() {
                 "
               />
 
-              {/* CONTENT */}
               <div className="p-8">
                 <p
                   className="
@@ -116,7 +106,7 @@ export default function Projects() {
                 </h3>
               </div>
 
-           </motion.div>
+            </motion.div>
           ))}
 
         </div>
