@@ -1,10 +1,10 @@
 import Container from "../components/Container";
+import Button from "../components/Button";
 
 export default function Footer() {
   return (
     <footer id="contact" className="py-16">
       <Container>
-
         <div
           className="
             rounded-[32px]
@@ -22,17 +22,8 @@ export default function Footer() {
           "
         >
 
-          <div
-            className="
-              flex
-              flex-col
-              md:flex-row
-              md:items-center
-              md:justify-between
-              gap-10
-            "
-          >
-
+          {/* TOP */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
             <div>
               <h2
                 className="
@@ -53,41 +44,15 @@ export default function Footer() {
             </div>
 
             <div className="max-w-md">
-              <p
-                className="
-                  text-gray-600
-                  dark:text-gray-400
-                  text-lg
-                "
-              >
-                Building modern digital experiences
-                with clean UI and strong visual
-                identity.
+              <p className="text-gray-600 dark:text-gray-400 text-lg">
+                Building modern digital experiences with clean UI and strong
+                visual identity.
               </p>
-
-              <button
-                className="
-                  mt-6
-                  rounded-2xl
-                  bg-black
-                  text-white
-                  dark:bg-white
-                  dark:text-black
-                  px-6
-                  py-3
-                  font-medium
-                  transition
-                  duration-300
-                  hover:scale-105
-                  hover:-translate-y-1
-                "
-              >
-                Contact Me
-              </button>
+              <Button className="mt-6 rounded-2xl">Contact Me</Button>
             </div>
-
           </div>
 
+          {/* BOTTOM */}
           <div
             className="
               mt-12
@@ -103,48 +68,16 @@ export default function Footer() {
               gap-4
             "
           >
+            <p className="text-sm text-gray-500">© 2026 Portfolio</p>
 
-            <p className="text-sm text-gray-500">
-              © 2026 Portfolio
-            </p>
-
-            <div className="flex gap-6 text-sm">
-              <a
-                href="#"
-                className="
-                  transition
-                  duration-300
-                  hover:text-pink-500
-                "
-              >
-                Twitter
-              </a>
-              <a
-                href="#"
-                className="
-                  transition
-                  duration-300
-                  hover:text-pink-500
-                "
-              >
-                Linkedin
-              </a>
-              <a
-                href="#"
-                className="
-                  transition
-                  duration-300
-                  hover:text-pink-500
-                "
-              >
-                Behance
-              </a>
-            </div>
-
+            <nav aria-label="Social links" className="flex gap-6 text-sm">
+              <a href="#" className="transition duration-300 hover:text-pink-500">Twitter</a>
+              <a href="#" className="transition duration-300 hover:text-pink-500">Linkedin</a>
+              <a href="#" className="transition duration-300 hover:text-pink-500">Behance</a>
+            </nav>
           </div>
 
         </div>
-
       </Container>
     </footer>
   );
